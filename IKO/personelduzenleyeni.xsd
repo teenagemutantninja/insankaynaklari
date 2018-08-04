@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="personelduzenleyeni" targetNamespace="http://tempuri.org/personelduzenleyeni.xsd" xmlns:mstns="http://tempuri.org/personelduzenleyeni.xsd" xmlns="http://tempuri.org/personelduzenleyeni.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="sirketConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sirketConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.IKO.Properties.Settings.GlobalReference.Default.sirketConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_personelTableAdapter" GeneratorDataComponentClassName="tbl_personelTableAdapter" Name="tbl_personel" UserDataComponentName="tbl_personelTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sirketConnectionString (Settings)" DbObjectName="insankaynaklari.dbo.tbl_personel" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[tbl_personel] WHERE (([p_id] = @Original_p_id) AND ((@IsNull_p_tc_kimlik = 1 AND [p_tc_kimlik] IS NULL) OR ([p_tc_kimlik] = @Original_p_tc_kimlik)) AND ((@IsNull_p_isim = 1 AND [p_isim] IS NULL) OR ([p_isim] = @Original_p_isim)) AND ((@IsNull_p_soy_isim = 1 AND [p_soy_isim] IS NULL) OR ([p_soy_isim] = @Original_p_soy_isim)) AND ((@IsNull_p_tel = 1 AND [p_tel] IS NULL) OR ([p_tel] = @Original_p_tel)) AND ((@IsNull_p_adres = 1 AND [p_adres] IS NULL) OR ([p_adres] = @Original_p_adres)) AND ((@IsNull_p_cinsiyet = 1 AND [p_cinsiyet] IS NULL) OR ([p_cinsiyet] = @Original_p_cinsiyet)) AND ((@IsNull_p_departman = 1 AND [p_departman] IS NULL) OR ([p_departman] = @Original_p_departman)) AND ((@IsNull_personel_dogum_tarihi = 1 AND [personel_dogum_tarihi] IS NULL) OR ([personel_dogum_tarihi] = @Original_personel_dogum_tarihi)) AND ((@IsNull_p_egitim = 1 AND [p_egitim] IS NULL) OR ([p_egitim] = @Original_p_egitim)) AND ((@IsNull_p_kan_grubu = 1 AND [p_kan_grubu] IS NULL) OR ([p_kan_grubu] = @Original_p_kan_grubu)) AND ((@IsNull_p_staj = 1 AND [p_staj] IS NULL) OR ([p_staj] = @Original_p_staj)) AND ((@IsNull_p_askerlik = 1 AND [p_askerlik] IS NULL) OR ([p_askerlik] = @Original_p_askerlik)) AND ((@IsNull_p_sirketadres = 1 AND [p_sirketadres] IS NULL) OR ([p_sirketadres] = @Original_p_sirketadres)) AND ((@IsNull_p_eposta = 1 AND [p_eposta] IS NULL) OR ([p_eposta] = @Original_p_eposta)) AND ((@IsNull_p_ulke = 1 AND [p_ulke] IS NULL) OR ([p_ulke] = @Original_p_ulke)) AND ((@IsNull_p_dogumyeri = 1 AND [p_dogumyeri] IS NULL) OR ([p_dogumyeri] = @Original_p_dogumyeri)) AND ((@IsNull_p_ilgialani = 1 AND [p_ilgialani] IS NULL) OR ([p_ilgialani] = @Original_p_ilgialani)) AND ((@IsNull_p_referans = 1 AND [p_referans] IS NULL) OR ([p_referans] = @Original_p_referans)) AND ((@IsNull_p_egitimokuladi = 1 AND [p_egitimokuladi] IS NULL) OR ([p_egitimokuladi] = @Original_p_egitimokuladi)) AND ((@IsNull_p_egitimbolum = 1 AND [p_egitimbolum] IS NULL) OR ([p_egitimbolum] = @Original_p_egitimbolum)) AND ((@IsNull_p_egitimbaslangic = 1 AND [p_egitimbaslangic] IS NULL) OR ([p_egitimbaslangic] = @Original_p_egitimbaslangic)) AND ((@IsNull_p_egitimbitis = 1 AND [p_egitimbitis] IS NULL) OR ([p_egitimbitis] = @Original_p_egitimbitis)) AND ((@IsNull_p_notort = 1 AND [p_notort] IS NULL) OR ([p_notort] = @Original_p_notort)) AND ((@IsNull_p_tecrube = 1 AND [p_tecrube] IS NULL) OR ([p_tecrube] = @Original_p_tecrube)) AND ((@IsNull_p_tecrubesirketadres = 1 AND [p_tecrubesirketadres] IS NULL) OR ([p_tecrubesirketadres] = @Original_p_tecrubesirketadres)) AND ((@IsNull_p_tecrubepozisyon = 1 AND [p_tecrubepozisyon] IS NULL) OR ([p_tecrubepozisyon] = @Original_p_tecrubepozisyon)) AND ((@IsNull_p_dil = 1 AND [p_dil] IS NULL) OR ([p_dil] = @Original_p_dil)) AND ((@IsNull_p_resim = 1 AND [p_resim] IS NULL) OR ([p_resim] = @Original_p_resim)) AND ((@IsNull_p_cv = 1 AND [p_cv] IS NULL) OR ([p_cv] = @Original_p_cv)) AND ((@IsNull_p_maas = 1 AND [p_maas] IS NULL) OR ([p_maas] = @Original_p_maas)) AND ((@IsNull_p_issiz = 1 AND [p_issiz] IS NULL) OR ([p_issiz] = @Original_p_issiz)) AND ((@IsNull_p_dildig = 1 AND [p_dildig] IS NULL) OR ([p_dildig] = @Original_p_dildig)) AND ((@IsNull_p_refiletisim = 1 AND [p_refiletisim] IS NULL) OR ([p_refiletisim] = @Original_p_refiletisim)) AND ((@IsNull_p_refpoz = 1 AND [p_refpoz] IS NULL) OR ([p_refpoz] = @Original_p_refpoz)) AND ((@IsNull_p_rapor = 1 AND [p_rapor] IS NULL) OR ([p_rapor] = @Original_p_rapor)) AND ((@IsNull_pizinaciklama = 1 AND [pizinaciklama] IS NULL) OR ([pizinaciklama] = @Original_pizinaciklama)) AND ((@IsNull_pizinbasla = 1 AND [pizinbasla] IS NULL) OR ([pizinbasla] = @Original_pizinbasla)) AND ((@IsNull_pizinbit = 1 AND [pizinbit] IS NULL) OR ([pizinbit] = @Original_pizinbit)) AND ((@IsNull_pizin = 1 AND [pizin] IS NULL) OR ([pizin] = @Original_pizin)) AND ((@IsNull_p_pozisyon = 1 AND [p_pozisyon] IS NULL) OR ([p_pozisyon] = @Original_p_pozisyon)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_p_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_tc_kimlik" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_tc_kimlik" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_p_tc_kimlik" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="p_tc_kimlik" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_isim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_isim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_isim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_isim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_soy_isim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_soy_isim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_soy_isim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_soy_isim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_tel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_tel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_tel" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_tel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_adres" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_adres" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_adres" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_adres" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_cinsiyet" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_cinsiyet" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_cinsiyet" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_cinsiyet" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_departman" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_departman" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_departman" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_departman" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_personel_dogum_tarihi" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="personel_dogum_tarihi" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_personel_dogum_tarihi" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="personel_dogum_tarihi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_egitim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_egitim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_egitim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_kan_grubu" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_kan_grubu" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_kan_grubu" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_kan_grubu" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_staj" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_staj" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_p_staj" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_staj" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_askerlik" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_askerlik" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_askerlik" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_askerlik" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_sirketadres" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_sirketadres" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_sirketadres" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_sirketadres" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_eposta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_eposta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_eposta" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_eposta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_ulke" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_ulke" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_ulke" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_ulke" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_dogumyeri" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_dogumyeri" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_dogumyeri" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_dogumyeri" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_ilgialani" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_ilgialani" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_ilgialani" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_ilgialani" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_referans" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_referans" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_referans" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_referans" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_egitimokuladi" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_egitimokuladi" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_egitimokuladi" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitimokuladi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_egitimbolum" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_egitimbolum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_egitimbolum" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitimbolum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_egitimbaslangic" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_egitimbaslangic" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_egitimbaslangic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitimbaslangic" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_egitimbitis" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_egitimbitis" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_egitimbitis" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitimbitis" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_notort" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_notort" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_p_notort" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_notort" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_tecrube" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_tecrube" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_tecrube" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_tecrube" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_tecrubesirketadres" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_tecrubesirketadres" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_tecrubesirketadres" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_tecrubesirketadres" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_tecrubepozisyon" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_tecrubepozisyon" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_tecrubepozisyon" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_tecrubepozisyon" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_dil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_dil" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_dil" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_dil" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_resim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_resim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_resim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_resim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_cv" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_cv" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_cv" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_cv" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_maas" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_maas" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_maas" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_maas" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_issiz" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_issiz" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_issiz" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_issiz" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_dildig" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_dildig" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_dildig" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_dildig" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_refiletisim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_refiletisim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_refiletisim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_refiletisim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_refpoz" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_refpoz" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_refpoz" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_refpoz" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_rapor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_rapor" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_rapor" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_rapor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_pizinaciklama" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="pizinaciklama" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_pizinaciklama" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="pizinaciklama" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_pizinbasla" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="pizinbasla" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_pizinbasla" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="pizinbasla" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_pizinbit" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="pizinbit" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_pizinbit" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="pizinbit" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_pizin" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="pizin" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_pizin" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="pizin" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_pozisyon" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_pozisyon" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_pozisyon" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_pozisyon" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[tbl_personel] ([p_tc_kimlik], [p_isim], [p_soy_isim], [p_tel], [p_adres], [p_cinsiyet], [p_departman], [personel_dogum_tarihi], [p_egitim], [p_kan_grubu], [p_staj], [p_askerlik], [p_sirketadres], [p_eposta], [p_ulke], [p_dogumyeri], [p_ilgialani], [p_referans], [p_egitimokuladi], [p_egitimbolum], [p_egitimbaslangic], [p_egitimbitis], [p_notort], [p_tecrube], [p_tecrubesirketadres], [p_tecrubepozisyon], [p_dil], [p_resim], [p_cv], [p_maas], [p_issiz], [p_dildig], [p_refiletisim], [p_refpoz], [p_rapor], [pizinaciklama], [pizinbasla], [pizinbit], [pizin], [p_pozisyon]) VALUES (@p_tc_kimlik, @p_isim, @p_soy_isim, @p_tel, @p_adres, @p_cinsiyet, @p_departman, @personel_dogum_tarihi, @p_egitim, @p_kan_grubu, @p_staj, @p_askerlik, @p_sirketadres, @p_eposta, @p_ulke, @p_dogumyeri, @p_ilgialani, @p_referans, @p_egitimokuladi, @p_egitimbolum, @p_egitimbaslangic, @p_egitimbitis, @p_notort, @p_tecrube, @p_tecrubesirketadres, @p_tecrubepozisyon, @p_dil, @p_resim, @p_cv, @p_maas, @p_issiz, @p_dildig, @p_refiletisim, @p_refpoz, @p_rapor, @pizinaciklama, @pizinbasla, @pizinbit, @pizin, @p_pozisyon);
+SELECT p_id, p_tc_kimlik, p_isim, p_soy_isim, p_tel, p_adres, p_cinsiyet, p_departman, personel_dogum_tarihi, p_egitim, p_kan_grubu, p_staj, p_askerlik, p_sirketadres, p_eposta, p_ulke, p_dogumyeri, p_ilgialani, p_referans, p_egitimokuladi, p_egitimbolum, p_egitimbaslangic, p_egitimbitis, p_notort, p_tecrube, p_tecrubesirketadres, p_tecrubepozisyon, p_dil, p_resim, p_cv, p_maas, p_issiz, p_dildig, p_refiletisim, p_refpoz, p_rapor, pizinaciklama, pizinbasla, pizinbit, pizin, p_pozisyon FROM tbl_personel WHERE (p_id = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@p_tc_kimlik" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="p_tc_kimlik" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_isim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_isim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_soy_isim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_soy_isim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_tel" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_tel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_adres" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_adres" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_cinsiyet" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_cinsiyet" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_departman" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_departman" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@personel_dogum_tarihi" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="personel_dogum_tarihi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_egitim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_kan_grubu" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_kan_grubu" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p_staj" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_staj" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_askerlik" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_askerlik" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_sirketadres" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_sirketadres" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_eposta" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_eposta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_ulke" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_ulke" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_dogumyeri" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_dogumyeri" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_ilgialani" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_ilgialani" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_referans" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_referans" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_egitimokuladi" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitimokuladi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_egitimbolum" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitimbolum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_egitimbaslangic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitimbaslangic" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_egitimbitis" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitimbitis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p_notort" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_notort" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_tecrube" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_tecrube" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_tecrubesirketadres" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_tecrubesirketadres" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_tecrubepozisyon" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_tecrubepozisyon" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_dil" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_dil" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_resim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_resim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_cv" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_cv" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_maas" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_maas" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_issiz" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_issiz" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_dildig" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_dildig" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_refiletisim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_refiletisim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_refpoz" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_refpoz" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_rapor" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_rapor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@pizinaciklama" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="pizinaciklama" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@pizinbasla" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="pizinbasla" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@pizinbit" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="pizinbit" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@pizin" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="pizin" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_pozisyon" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_pozisyon" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT p_id, p_tc_kimlik, p_isim, p_soy_isim, p_tel, p_adres, p_cinsiyet, p_departman, personel_dogum_tarihi, p_egitim, p_kan_grubu, p_staj, p_askerlik, p_sirketadres, p_eposta, p_ulke, p_dogumyeri, p_ilgialani, p_referans, p_egitimokuladi, p_egitimbolum, p_egitimbaslangic, p_egitimbitis, p_notort, p_tecrube, p_tecrubesirketadres, p_tecrubepozisyon, p_dil, p_resim, p_cv, p_maas, p_issiz, p_dildig, p_refiletisim, p_refpoz, p_rapor, pizinaciklama, pizinbasla, pizinbit, pizin, p_pozisyon FROM dbo.tbl_personel</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[tbl_personel] SET [p_tc_kimlik] = @p_tc_kimlik, [p_isim] = @p_isim, [p_soy_isim] = @p_soy_isim, [p_tel] = @p_tel, [p_adres] = @p_adres, [p_cinsiyet] = @p_cinsiyet, [p_departman] = @p_departman, [personel_dogum_tarihi] = @personel_dogum_tarihi, [p_egitim] = @p_egitim, [p_kan_grubu] = @p_kan_grubu, [p_staj] = @p_staj, [p_askerlik] = @p_askerlik, [p_sirketadres] = @p_sirketadres, [p_eposta] = @p_eposta, [p_ulke] = @p_ulke, [p_dogumyeri] = @p_dogumyeri, [p_ilgialani] = @p_ilgialani, [p_referans] = @p_referans, [p_egitimokuladi] = @p_egitimokuladi, [p_egitimbolum] = @p_egitimbolum, [p_egitimbaslangic] = @p_egitimbaslangic, [p_egitimbitis] = @p_egitimbitis, [p_notort] = @p_notort, [p_tecrube] = @p_tecrube, [p_tecrubesirketadres] = @p_tecrubesirketadres, [p_tecrubepozisyon] = @p_tecrubepozisyon, [p_dil] = @p_dil, [p_resim] = @p_resim, [p_cv] = @p_cv, [p_maas] = @p_maas, [p_issiz] = @p_issiz, [p_dildig] = @p_dildig, [p_refiletisim] = @p_refiletisim, [p_refpoz] = @p_refpoz, [p_rapor] = @p_rapor, [pizinaciklama] = @pizinaciklama, [pizinbasla] = @pizinbasla, [pizinbit] = @pizinbit, [pizin] = @pizin, [p_pozisyon] = @p_pozisyon WHERE (([p_id] = @Original_p_id) AND ((@IsNull_p_tc_kimlik = 1 AND [p_tc_kimlik] IS NULL) OR ([p_tc_kimlik] = @Original_p_tc_kimlik)) AND ((@IsNull_p_isim = 1 AND [p_isim] IS NULL) OR ([p_isim] = @Original_p_isim)) AND ((@IsNull_p_soy_isim = 1 AND [p_soy_isim] IS NULL) OR ([p_soy_isim] = @Original_p_soy_isim)) AND ((@IsNull_p_tel = 1 AND [p_tel] IS NULL) OR ([p_tel] = @Original_p_tel)) AND ((@IsNull_p_adres = 1 AND [p_adres] IS NULL) OR ([p_adres] = @Original_p_adres)) AND ((@IsNull_p_cinsiyet = 1 AND [p_cinsiyet] IS NULL) OR ([p_cinsiyet] = @Original_p_cinsiyet)) AND ((@IsNull_p_departman = 1 AND [p_departman] IS NULL) OR ([p_departman] = @Original_p_departman)) AND ((@IsNull_personel_dogum_tarihi = 1 AND [personel_dogum_tarihi] IS NULL) OR ([personel_dogum_tarihi] = @Original_personel_dogum_tarihi)) AND ((@IsNull_p_egitim = 1 AND [p_egitim] IS NULL) OR ([p_egitim] = @Original_p_egitim)) AND ((@IsNull_p_kan_grubu = 1 AND [p_kan_grubu] IS NULL) OR ([p_kan_grubu] = @Original_p_kan_grubu)) AND ((@IsNull_p_staj = 1 AND [p_staj] IS NULL) OR ([p_staj] = @Original_p_staj)) AND ((@IsNull_p_askerlik = 1 AND [p_askerlik] IS NULL) OR ([p_askerlik] = @Original_p_askerlik)) AND ((@IsNull_p_sirketadres = 1 AND [p_sirketadres] IS NULL) OR ([p_sirketadres] = @Original_p_sirketadres)) AND ((@IsNull_p_eposta = 1 AND [p_eposta] IS NULL) OR ([p_eposta] = @Original_p_eposta)) AND ((@IsNull_p_ulke = 1 AND [p_ulke] IS NULL) OR ([p_ulke] = @Original_p_ulke)) AND ((@IsNull_p_dogumyeri = 1 AND [p_dogumyeri] IS NULL) OR ([p_dogumyeri] = @Original_p_dogumyeri)) AND ((@IsNull_p_ilgialani = 1 AND [p_ilgialani] IS NULL) OR ([p_ilgialani] = @Original_p_ilgialani)) AND ((@IsNull_p_referans = 1 AND [p_referans] IS NULL) OR ([p_referans] = @Original_p_referans)) AND ((@IsNull_p_egitimokuladi = 1 AND [p_egitimokuladi] IS NULL) OR ([p_egitimokuladi] = @Original_p_egitimokuladi)) AND ((@IsNull_p_egitimbolum = 1 AND [p_egitimbolum] IS NULL) OR ([p_egitimbolum] = @Original_p_egitimbolum)) AND ((@IsNull_p_egitimbaslangic = 1 AND [p_egitimbaslangic] IS NULL) OR ([p_egitimbaslangic] = @Original_p_egitimbaslangic)) AND ((@IsNull_p_egitimbitis = 1 AND [p_egitimbitis] IS NULL) OR ([p_egitimbitis] = @Original_p_egitimbitis)) AND ((@IsNull_p_notort = 1 AND [p_notort] IS NULL) OR ([p_notort] = @Original_p_notort)) AND ((@IsNull_p_tecrube = 1 AND [p_tecrube] IS NULL) OR ([p_tecrube] = @Original_p_tecrube)) AND ((@IsNull_p_tecrubesirketadres = 1 AND [p_tecrubesirketadres] IS NULL) OR ([p_tecrubesirketadres] = @Original_p_tecrubesirketadres)) AND ((@IsNull_p_tecrubepozisyon = 1 AND [p_tecrubepozisyon] IS NULL) OR ([p_tecrubepozisyon] = @Original_p_tecrubepozisyon)) AND ((@IsNull_p_dil = 1 AND [p_dil] IS NULL) OR ([p_dil] = @Original_p_dil)) AND ((@IsNull_p_resim = 1 AND [p_resim] IS NULL) OR ([p_resim] = @Original_p_resim)) AND ((@IsNull_p_cv = 1 AND [p_cv] IS NULL) OR ([p_cv] = @Original_p_cv)) AND ((@IsNull_p_maas = 1 AND [p_maas] IS NULL) OR ([p_maas] = @Original_p_maas)) AND ((@IsNull_p_issiz = 1 AND [p_issiz] IS NULL) OR ([p_issiz] = @Original_p_issiz)) AND ((@IsNull_p_dildig = 1 AND [p_dildig] IS NULL) OR ([p_dildig] = @Original_p_dildig)) AND ((@IsNull_p_refiletisim = 1 AND [p_refiletisim] IS NULL) OR ([p_refiletisim] = @Original_p_refiletisim)) AND ((@IsNull_p_refpoz = 1 AND [p_refpoz] IS NULL) OR ([p_refpoz] = @Original_p_refpoz)) AND ((@IsNull_p_rapor = 1 AND [p_rapor] IS NULL) OR ([p_rapor] = @Original_p_rapor)) AND ((@IsNull_pizinaciklama = 1 AND [pizinaciklama] IS NULL) OR ([pizinaciklama] = @Original_pizinaciklama)) AND ((@IsNull_pizinbasla = 1 AND [pizinbasla] IS NULL) OR ([pizinbasla] = @Original_pizinbasla)) AND ((@IsNull_pizinbit = 1 AND [pizinbit] IS NULL) OR ([pizinbit] = @Original_pizinbit)) AND ((@IsNull_pizin = 1 AND [pizin] IS NULL) OR ([pizin] = @Original_pizin)) AND ((@IsNull_p_pozisyon = 1 AND [p_pozisyon] IS NULL) OR ([p_pozisyon] = @Original_p_pozisyon)));
+SELECT p_id, p_tc_kimlik, p_isim, p_soy_isim, p_tel, p_adres, p_cinsiyet, p_departman, personel_dogum_tarihi, p_egitim, p_kan_grubu, p_staj, p_askerlik, p_sirketadres, p_eposta, p_ulke, p_dogumyeri, p_ilgialani, p_referans, p_egitimokuladi, p_egitimbolum, p_egitimbaslangic, p_egitimbitis, p_notort, p_tecrube, p_tecrubesirketadres, p_tecrubepozisyon, p_dil, p_resim, p_cv, p_maas, p_issiz, p_dildig, p_refiletisim, p_refpoz, p_rapor, pizinaciklama, pizinbasla, pizinbit, pizin, p_pozisyon FROM tbl_personel WHERE (p_id = @p_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@p_tc_kimlik" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="p_tc_kimlik" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_isim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_isim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_soy_isim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_soy_isim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_tel" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_tel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_adres" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_adres" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_cinsiyet" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_cinsiyet" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_departman" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_departman" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@personel_dogum_tarihi" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="personel_dogum_tarihi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_egitim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_kan_grubu" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_kan_grubu" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p_staj" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_staj" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_askerlik" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_askerlik" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_sirketadres" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_sirketadres" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_eposta" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_eposta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_ulke" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_ulke" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_dogumyeri" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_dogumyeri" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_ilgialani" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_ilgialani" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_referans" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_referans" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_egitimokuladi" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitimokuladi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_egitimbolum" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitimbolum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_egitimbaslangic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitimbaslangic" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_egitimbitis" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitimbitis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p_notort" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_notort" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_tecrube" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_tecrube" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_tecrubesirketadres" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_tecrubesirketadres" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_tecrubepozisyon" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_tecrubepozisyon" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_dil" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_dil" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_resim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_resim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_cv" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_cv" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_maas" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_maas" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_issiz" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_issiz" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_dildig" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_dildig" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_refiletisim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_refiletisim" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_refpoz" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_refpoz" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_rapor" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_rapor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@pizinaciklama" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="pizinaciklama" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@pizinbasla" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="pizinbasla" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@pizinbit" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="pizinbit" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@pizin" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="pizin" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p_pozisyon" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_pozisyon" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_p_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_tc_kimlik" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_tc_kimlik" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_p_tc_kimlik" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="p_tc_kimlik" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_isim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_isim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_isim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_isim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_soy_isim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_soy_isim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_soy_isim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_soy_isim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_tel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_tel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_tel" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_tel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_adres" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_adres" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_adres" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_adres" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_cinsiyet" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_cinsiyet" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_cinsiyet" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_cinsiyet" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_departman" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_departman" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_departman" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_departman" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_personel_dogum_tarihi" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="personel_dogum_tarihi" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_personel_dogum_tarihi" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="personel_dogum_tarihi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_egitim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_egitim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_egitim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_kan_grubu" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_kan_grubu" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_kan_grubu" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_kan_grubu" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_staj" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_staj" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_p_staj" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_staj" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_askerlik" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_askerlik" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_askerlik" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_askerlik" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_sirketadres" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_sirketadres" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_sirketadres" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_sirketadres" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_eposta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_eposta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_eposta" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_eposta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_ulke" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_ulke" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_ulke" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_ulke" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_dogumyeri" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_dogumyeri" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_dogumyeri" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_dogumyeri" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_ilgialani" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_ilgialani" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_ilgialani" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_ilgialani" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_referans" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_referans" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_referans" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_referans" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_egitimokuladi" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_egitimokuladi" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_egitimokuladi" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitimokuladi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_egitimbolum" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_egitimbolum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_egitimbolum" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitimbolum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_egitimbaslangic" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_egitimbaslangic" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_egitimbaslangic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitimbaslangic" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_egitimbitis" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_egitimbitis" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_egitimbitis" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_egitimbitis" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_notort" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_notort" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_p_notort" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_notort" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_tecrube" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_tecrube" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_tecrube" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_tecrube" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_tecrubesirketadres" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_tecrubesirketadres" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_tecrubesirketadres" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_tecrubesirketadres" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_tecrubepozisyon" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_tecrubepozisyon" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_tecrubepozisyon" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_tecrubepozisyon" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_dil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_dil" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_dil" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_dil" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_resim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_resim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_resim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_resim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_cv" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_cv" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_cv" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_cv" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_maas" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_maas" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_maas" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_maas" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_issiz" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_issiz" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_issiz" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_issiz" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_dildig" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_dildig" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_dildig" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_dildig" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_refiletisim" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_refiletisim" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_refiletisim" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_refiletisim" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_refpoz" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_refpoz" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_refpoz" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_refpoz" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_rapor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_rapor" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_rapor" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_rapor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_pizinaciklama" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="pizinaciklama" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_pizinaciklama" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="pizinaciklama" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_pizinbasla" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="pizinbasla" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_pizinbasla" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="pizinbasla" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_pizinbit" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="pizinbit" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_pizinbit" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="pizinbit" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_pizin" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="pizin" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_pizin" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="pizin" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_p_pozisyon" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="p_pozisyon" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_p_pozisyon" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="p_pozisyon" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="p_id" ColumnName="p_id" DataSourceName="insankaynaklari.dbo.tbl_personel" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@p_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="p_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="p_id" DataSetColumn="p_id" />
+              <Mapping SourceColumn="p_tc_kimlik" DataSetColumn="p_tc_kimlik" />
+              <Mapping SourceColumn="p_isim" DataSetColumn="p_isim" />
+              <Mapping SourceColumn="p_soy_isim" DataSetColumn="p_soy_isim" />
+              <Mapping SourceColumn="p_tel" DataSetColumn="p_tel" />
+              <Mapping SourceColumn="p_adres" DataSetColumn="p_adres" />
+              <Mapping SourceColumn="p_cinsiyet" DataSetColumn="p_cinsiyet" />
+              <Mapping SourceColumn="p_departman" DataSetColumn="p_departman" />
+              <Mapping SourceColumn="personel_dogum_tarihi" DataSetColumn="personel_dogum_tarihi" />
+              <Mapping SourceColumn="p_egitim" DataSetColumn="p_egitim" />
+              <Mapping SourceColumn="p_kan_grubu" DataSetColumn="p_kan_grubu" />
+              <Mapping SourceColumn="p_staj" DataSetColumn="p_staj" />
+              <Mapping SourceColumn="p_askerlik" DataSetColumn="p_askerlik" />
+              <Mapping SourceColumn="p_sirketadres" DataSetColumn="p_sirketadres" />
+              <Mapping SourceColumn="p_eposta" DataSetColumn="p_eposta" />
+              <Mapping SourceColumn="p_ulke" DataSetColumn="p_ulke" />
+              <Mapping SourceColumn="p_dogumyeri" DataSetColumn="p_dogumyeri" />
+              <Mapping SourceColumn="p_ilgialani" DataSetColumn="p_ilgialani" />
+              <Mapping SourceColumn="p_referans" DataSetColumn="p_referans" />
+              <Mapping SourceColumn="p_egitimokuladi" DataSetColumn="p_egitimokuladi" />
+              <Mapping SourceColumn="p_egitimbolum" DataSetColumn="p_egitimbolum" />
+              <Mapping SourceColumn="p_egitimbaslangic" DataSetColumn="p_egitimbaslangic" />
+              <Mapping SourceColumn="p_egitimbitis" DataSetColumn="p_egitimbitis" />
+              <Mapping SourceColumn="p_notort" DataSetColumn="p_notort" />
+              <Mapping SourceColumn="p_tecrube" DataSetColumn="p_tecrube" />
+              <Mapping SourceColumn="p_tecrubesirketadres" DataSetColumn="p_tecrubesirketadres" />
+              <Mapping SourceColumn="p_tecrubepozisyon" DataSetColumn="p_tecrubepozisyon" />
+              <Mapping SourceColumn="p_dil" DataSetColumn="p_dil" />
+              <Mapping SourceColumn="p_resim" DataSetColumn="p_resim" />
+              <Mapping SourceColumn="p_cv" DataSetColumn="p_cv" />
+              <Mapping SourceColumn="p_maas" DataSetColumn="p_maas" />
+              <Mapping SourceColumn="p_issiz" DataSetColumn="p_issiz" />
+              <Mapping SourceColumn="p_dildig" DataSetColumn="p_dildig" />
+              <Mapping SourceColumn="p_refiletisim" DataSetColumn="p_refiletisim" />
+              <Mapping SourceColumn="p_refpoz" DataSetColumn="p_refpoz" />
+              <Mapping SourceColumn="p_rapor" DataSetColumn="p_rapor" />
+              <Mapping SourceColumn="pizinaciklama" DataSetColumn="pizinaciklama" />
+              <Mapping SourceColumn="pizinbasla" DataSetColumn="pizinbasla" />
+              <Mapping SourceColumn="pizinbit" DataSetColumn="pizinbit" />
+              <Mapping SourceColumn="pizin" DataSetColumn="pizin" />
+              <Mapping SourceColumn="p_pozisyon" DataSetColumn="p_pozisyon" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="personelduzenleyeni" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="personelduzenleyeni" msprop:Generator_UserDSName="personelduzenleyeni">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl_personel" msprop:Generator_TableClassName="tbl_personelDataTable" msprop:Generator_TableVarName="tabletbl_personel" msprop:Generator_TablePropName="tbl_personel" msprop:Generator_RowDeletingName="tbl_personelRowDeleting" msprop:Generator_RowChangingName="tbl_personelRowChanging" msprop:Generator_RowEvHandlerName="tbl_personelRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_personelRowDeleted" msprop:Generator_UserTableName="tbl_personel" msprop:Generator_RowChangedName="tbl_personelRowChanged" msprop:Generator_RowEvArgName="tbl_personelRowChangeEvent" msprop:Generator_RowClassName="tbl_personelRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="p_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnp_id" msprop:Generator_ColumnPropNameInRow="p_id" msprop:Generator_ColumnPropNameInTable="p_idColumn" msprop:Generator_UserColumnName="p_id" type="xs:int" />
+              <xs:element name="p_tc_kimlik" msprop:Generator_ColumnVarNameInTable="columnp_tc_kimlik" msprop:Generator_ColumnPropNameInRow="p_tc_kimlik" msprop:Generator_ColumnPropNameInTable="p_tc_kimlikColumn" msprop:Generator_UserColumnName="p_tc_kimlik" type="xs:long" minOccurs="0" />
+              <xs:element name="p_isim" msprop:Generator_ColumnVarNameInTable="columnp_isim" msprop:Generator_ColumnPropNameInRow="p_isim" msprop:Generator_ColumnPropNameInTable="p_isimColumn" msprop:Generator_UserColumnName="p_isim" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_soy_isim" msprop:Generator_ColumnVarNameInTable="columnp_soy_isim" msprop:Generator_ColumnPropNameInRow="p_soy_isim" msprop:Generator_ColumnPropNameInTable="p_soy_isimColumn" msprop:Generator_UserColumnName="p_soy_isim" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_tel" msprop:Generator_ColumnVarNameInTable="columnp_tel" msprop:Generator_ColumnPropNameInRow="p_tel" msprop:Generator_ColumnPropNameInTable="p_telColumn" msprop:Generator_UserColumnName="p_tel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_adres" msprop:Generator_ColumnVarNameInTable="columnp_adres" msprop:Generator_ColumnPropNameInRow="p_adres" msprop:Generator_ColumnPropNameInTable="p_adresColumn" msprop:Generator_UserColumnName="p_adres" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_cinsiyet" msprop:Generator_ColumnVarNameInTable="columnp_cinsiyet" msprop:Generator_ColumnPropNameInRow="p_cinsiyet" msprop:Generator_ColumnPropNameInTable="p_cinsiyetColumn" msprop:Generator_UserColumnName="p_cinsiyet" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_departman" msprop:Generator_ColumnVarNameInTable="columnp_departman" msprop:Generator_ColumnPropNameInRow="p_departman" msprop:Generator_ColumnPropNameInTable="p_departmanColumn" msprop:Generator_UserColumnName="p_departman" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="personel_dogum_tarihi" msprop:Generator_ColumnVarNameInTable="columnpersonel_dogum_tarihi" msprop:Generator_ColumnPropNameInRow="personel_dogum_tarihi" msprop:Generator_ColumnPropNameInTable="personel_dogum_tarihiColumn" msprop:Generator_UserColumnName="personel_dogum_tarihi" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="p_egitim" msprop:Generator_ColumnVarNameInTable="columnp_egitim" msprop:Generator_ColumnPropNameInRow="p_egitim" msprop:Generator_ColumnPropNameInTable="p_egitimColumn" msprop:Generator_UserColumnName="p_egitim" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_kan_grubu" msprop:Generator_ColumnVarNameInTable="columnp_kan_grubu" msprop:Generator_ColumnPropNameInRow="p_kan_grubu" msprop:Generator_ColumnPropNameInTable="p_kan_grubuColumn" msprop:Generator_UserColumnName="p_kan_grubu" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_staj" msprop:Generator_ColumnVarNameInTable="columnp_staj" msprop:Generator_ColumnPropNameInRow="p_staj" msprop:Generator_ColumnPropNameInTable="p_stajColumn" msprop:Generator_UserColumnName="p_staj" type="xs:int" minOccurs="0" />
+              <xs:element name="p_askerlik" msprop:Generator_ColumnVarNameInTable="columnp_askerlik" msprop:Generator_ColumnPropNameInRow="p_askerlik" msprop:Generator_ColumnPropNameInTable="p_askerlikColumn" msprop:Generator_UserColumnName="p_askerlik" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_sirketadres" msprop:Generator_ColumnVarNameInTable="columnp_sirketadres" msprop:Generator_ColumnPropNameInRow="p_sirketadres" msprop:Generator_ColumnPropNameInTable="p_sirketadresColumn" msprop:Generator_UserColumnName="p_sirketadres" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_eposta" msprop:Generator_ColumnVarNameInTable="columnp_eposta" msprop:Generator_ColumnPropNameInRow="p_eposta" msprop:Generator_ColumnPropNameInTable="p_epostaColumn" msprop:Generator_UserColumnName="p_eposta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_ulke" msprop:Generator_ColumnVarNameInTable="columnp_ulke" msprop:Generator_ColumnPropNameInRow="p_ulke" msprop:Generator_ColumnPropNameInTable="p_ulkeColumn" msprop:Generator_UserColumnName="p_ulke" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_dogumyeri" msprop:Generator_ColumnVarNameInTable="columnp_dogumyeri" msprop:Generator_ColumnPropNameInRow="p_dogumyeri" msprop:Generator_ColumnPropNameInTable="p_dogumyeriColumn" msprop:Generator_UserColumnName="p_dogumyeri" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_ilgialani" msprop:Generator_ColumnVarNameInTable="columnp_ilgialani" msprop:Generator_ColumnPropNameInRow="p_ilgialani" msprop:Generator_ColumnPropNameInTable="p_ilgialaniColumn" msprop:Generator_UserColumnName="p_ilgialani" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_referans" msprop:Generator_ColumnVarNameInTable="columnp_referans" msprop:Generator_ColumnPropNameInRow="p_referans" msprop:Generator_ColumnPropNameInTable="p_referansColumn" msprop:Generator_UserColumnName="p_referans" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_egitimokuladi" msprop:Generator_ColumnVarNameInTable="columnp_egitimokuladi" msprop:Generator_ColumnPropNameInRow="p_egitimokuladi" msprop:Generator_ColumnPropNameInTable="p_egitimokuladiColumn" msprop:Generator_UserColumnName="p_egitimokuladi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_egitimbolum" msprop:Generator_ColumnVarNameInTable="columnp_egitimbolum" msprop:Generator_ColumnPropNameInRow="p_egitimbolum" msprop:Generator_ColumnPropNameInTable="p_egitimbolumColumn" msprop:Generator_UserColumnName="p_egitimbolum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_egitimbaslangic" msprop:Generator_ColumnVarNameInTable="columnp_egitimbaslangic" msprop:Generator_ColumnPropNameInRow="p_egitimbaslangic" msprop:Generator_ColumnPropNameInTable="p_egitimbaslangicColumn" msprop:Generator_UserColumnName="p_egitimbaslangic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_egitimbitis" msprop:Generator_ColumnVarNameInTable="columnp_egitimbitis" msprop:Generator_ColumnPropNameInRow="p_egitimbitis" msprop:Generator_ColumnPropNameInTable="p_egitimbitisColumn" msprop:Generator_UserColumnName="p_egitimbitis" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_notort" msprop:Generator_ColumnVarNameInTable="columnp_notort" msprop:Generator_ColumnPropNameInRow="p_notort" msprop:Generator_ColumnPropNameInTable="p_notortColumn" msprop:Generator_UserColumnName="p_notort" type="xs:int" minOccurs="0" />
+              <xs:element name="p_tecrube" msprop:Generator_ColumnVarNameInTable="columnp_tecrube" msprop:Generator_ColumnPropNameInRow="p_tecrube" msprop:Generator_ColumnPropNameInTable="p_tecrubeColumn" msprop:Generator_UserColumnName="p_tecrube" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_tecrubesirketadres" msprop:Generator_ColumnVarNameInTable="columnp_tecrubesirketadres" msprop:Generator_ColumnPropNameInRow="p_tecrubesirketadres" msprop:Generator_ColumnPropNameInTable="p_tecrubesirketadresColumn" msprop:Generator_UserColumnName="p_tecrubesirketadres" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_tecrubepozisyon" msprop:Generator_ColumnVarNameInTable="columnp_tecrubepozisyon" msprop:Generator_ColumnPropNameInRow="p_tecrubepozisyon" msprop:Generator_ColumnPropNameInTable="p_tecrubepozisyonColumn" msprop:Generator_UserColumnName="p_tecrubepozisyon" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_dil" msprop:Generator_ColumnVarNameInTable="columnp_dil" msprop:Generator_ColumnPropNameInRow="p_dil" msprop:Generator_ColumnPropNameInTable="p_dilColumn" msprop:Generator_UserColumnName="p_dil" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_resim" msprop:Generator_ColumnVarNameInTable="columnp_resim" msprop:Generator_ColumnPropNameInRow="p_resim" msprop:Generator_ColumnPropNameInTable="p_resimColumn" msprop:Generator_UserColumnName="p_resim" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_cv" msprop:Generator_ColumnVarNameInTable="columnp_cv" msprop:Generator_ColumnPropNameInRow="p_cv" msprop:Generator_ColumnPropNameInTable="p_cvColumn" msprop:Generator_UserColumnName="p_cv" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_maas" msprop:Generator_ColumnVarNameInTable="columnp_maas" msprop:Generator_ColumnPropNameInRow="p_maas" msprop:Generator_ColumnPropNameInTable="p_maasColumn" msprop:Generator_UserColumnName="p_maas" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_issiz" msprop:Generator_ColumnVarNameInTable="columnp_issiz" msprop:Generator_ColumnPropNameInRow="p_issiz" msprop:Generator_ColumnPropNameInTable="p_issizColumn" msprop:Generator_UserColumnName="p_issiz" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_dildig" msprop:Generator_ColumnVarNameInTable="columnp_dildig" msprop:Generator_ColumnPropNameInRow="p_dildig" msprop:Generator_ColumnPropNameInTable="p_dildigColumn" msprop:Generator_UserColumnName="p_dildig" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_refiletisim" msprop:Generator_ColumnVarNameInTable="columnp_refiletisim" msprop:Generator_ColumnPropNameInRow="p_refiletisim" msprop:Generator_ColumnPropNameInTable="p_refiletisimColumn" msprop:Generator_UserColumnName="p_refiletisim" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_refpoz" msprop:Generator_ColumnVarNameInTable="columnp_refpoz" msprop:Generator_ColumnPropNameInRow="p_refpoz" msprop:Generator_ColumnPropNameInTable="p_refpozColumn" msprop:Generator_UserColumnName="p_refpoz" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="p_rapor" msprop:Generator_ColumnVarNameInTable="columnp_rapor" msprop:Generator_ColumnPropNameInRow="p_rapor" msprop:Generator_ColumnPropNameInTable="p_raporColumn" msprop:Generator_UserColumnName="p_rapor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pizinaciklama" msprop:Generator_ColumnVarNameInTable="columnpizinaciklama" msprop:Generator_ColumnPropNameInRow="pizinaciklama" msprop:Generator_ColumnPropNameInTable="pizinaciklamaColumn" msprop:Generator_UserColumnName="pizinaciklama" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pizinbasla" msprop:Generator_ColumnVarNameInTable="columnpizinbasla" msprop:Generator_ColumnPropNameInRow="pizinbasla" msprop:Generator_ColumnPropNameInTable="pizinbaslaColumn" msprop:Generator_UserColumnName="pizinbasla" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="pizinbit" msprop:Generator_ColumnVarNameInTable="columnpizinbit" msprop:Generator_ColumnPropNameInRow="pizinbit" msprop:Generator_ColumnPropNameInTable="pizinbitColumn" msprop:Generator_UserColumnName="pizinbit" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="pizin" msprop:Generator_ColumnVarNameInTable="columnpizin" msprop:Generator_ColumnPropNameInRow="pizin" msprop:Generator_ColumnPropNameInTable="pizinColumn" msprop:Generator_UserColumnName="pizin" type="xs:int" minOccurs="0" />
+              <xs:element name="p_pozisyon" msprop:Generator_ColumnVarNameInTable="columnp_pozisyon" msprop:Generator_ColumnPropNameInRow="p_pozisyon" msprop:Generator_ColumnPropNameInTable="p_pozisyonColumn" msprop:Generator_UserColumnName="p_pozisyon" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_personel" />
+      <xs:field xpath="mstns:p_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
